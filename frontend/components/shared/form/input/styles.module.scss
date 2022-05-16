@@ -1,0 +1,31 @@
+$placeholder: #f4fff8;
+$background-color: #449f66;
+$borderColor: #3e965f;
+$color: #f4fff8;
+
+.input {
+  width: 100%;
+  padding: 18px 24px;
+  border-radius: 8px;
+  background-color: #449f66;
+  border: 2px solid #3e965f;
+  outline: 0;
+  color: #fff;
+  font-size: 16px;
+
+  &::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $placeholder;
+    opacity: 1; /* Firefox */
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $placeholder;
+  }
+
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $placeholder;
+  }
+}
