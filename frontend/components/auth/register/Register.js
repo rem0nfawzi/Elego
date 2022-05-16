@@ -4,11 +4,14 @@ import Input from "../../shared/form/input/Input";
 import Form from "../form/Form";
 import HaveAccount from "../have-account/HaveAccount";
 
-const Login = () => {
+const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const handleSubmit = e => {
+    e.preventDefault();
+  };
   return (
-    <Form title="Login">
+    <Form title="Register" onSubmit={handleSubmit}>
       <div>
         <Input
           type="text"
@@ -25,14 +28,14 @@ const Login = () => {
           placeholder="password"
         />
       </div>
-      <Button text="Login" />
+      <Button text="Register" />
       <HaveAccount
-        text="Doesn't have an account?"
-        linkText="Register"
-        url="/register"
+        text="Already have an account?"
+        linkText="Login"
+        url="/login"
       />
     </Form>
   );
 };
 
-export default Login;
+export default Register;
