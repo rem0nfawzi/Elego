@@ -1,4 +1,4 @@
-$placeholder: #f4fff8;
+$placeholder: #f4fff8bd;
 $background-color: #449f66;
 $borderColor: #3e965f;
 $color: #f4fff8;
@@ -12,7 +12,10 @@ $color: #f4fff8;
   outline: 0;
   color: #fff;
   font-size: 16px;
-
+  transition: all 0.2s ease-in-out;
+  &:focus {
+    background-color: #54b076;
+  }
   &::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: $placeholder;

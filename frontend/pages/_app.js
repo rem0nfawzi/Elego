@@ -1,7 +1,13 @@
 import "../public/assets/css/global.scss";
+import { Provider } from "react-redux";
+import { store } from "../store/store";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  );
 }
 
 // Only uncomment this method if you have blocking data requirements for

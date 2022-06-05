@@ -1,7 +1,8 @@
 import React from "react";
+import Contests from "../components/home/contests/Contests";
 
 const Index = () => {
-  return <div>Index</div>;
+  return <Contests />;
 };
 
 export default Index;

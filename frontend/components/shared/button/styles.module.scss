@@ -8,5 +8,14 @@ $background-color: #2788ca;
   border: 0;
   cursor: pointer;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 24px;
+  transition: all 0.2s ease-in-out;
+  font-family: poppins_bold;
+  &:hover {
+    background-color: #2484c3;
+  }
+  &:active {
+    background-color: #1f7bb8;
+  }
 }

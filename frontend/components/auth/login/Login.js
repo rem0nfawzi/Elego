@@ -1,14 +1,22 @@
 import React, { useState } from "react";
+import { login } from "../../../store/auth/reducer";
 import Button from "../../shared/button/Button";
 import Input from "../../shared/form/input/Input";
 import Form from "../form/Form";
 import HaveAccount from "../have-account/HaveAccount";
+import { useDispatch } from "react-redux";
 
 const Login = () => {
+  const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const handleSubmit = e => {
+    e.preventDefault();
+    dispatch(login({ email, password }));
+    // const emailValidation = validate(email, ["NOT_EMPTY"]);
+  };
   return (
-    <Form title="Login">
+    <Form title="Login" onSubmit={handleSubmit}>
       <div>
         <Input
           type="text"
@@ -27,7 +35,7 @@ const Login = () => {
       </div>
       <Button text="Login" />
       <HaveAccount
-        text="Doesn't have an account?"
+        text="Don't have an account?"
         linkText="Register"
         url="/register"
       />
