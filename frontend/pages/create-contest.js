@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
-import Contests from "../components/home/contests/Contests";
 import { setUser } from "../store/auth/reducer";
 import { useDispatch } from "react-redux";
 import authinticate from "../utils/authinticate";
+import CreateContest from "../components/create-contest/CreateContest";
 
-const Index = ({ user }) => {
+const Create = ({ user }) => {
   const dispatch = useDispatch();
   useEffect(() => {
     if (user) dispatch(setUser(user));
   }, [user]);
-  return <Contests />;
+  return <CreateContest />;
 };
 
 export async function getServerSideProps(context) {
@@ -31,4 +31,4 @@ export async function getServerSideProps(context) {
     redirect: { destination: "/login", permanent: false },
   };
 }
-export default Index;
+export default Create;

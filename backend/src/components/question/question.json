@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_question_questions",
+  "info": {
+    "displayName": "Question",
+    "icon": "question"
+  },
+  "options": {},
+  "attributes": {
+    "statement": {
+      "type": "string"
+    },
+    "answer": {
+      "displayName": "Answer",
+      "type": "component",
+      "repeatable": true,
+      "component": "answer.answer"
+    }
+  }
+}

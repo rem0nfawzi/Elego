@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contests",
+  "info": {
+    "singularName": "contest",
+    "pluralName": "contests",
+    "displayName": "Contest"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "question": {
+      "displayName": "Question",
+      "type": "component",
+      "repeatable": true,
+      "component": "question.question"
+    }
+  }
+}

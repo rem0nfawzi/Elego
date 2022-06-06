@@ -1,0 +1,39 @@
+.add {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .form {
+    width: 600px;
+    background-color: #5bbd80;
+    padding: 60px;
+    border-radius: 12px;
+    z-index: 2;
+    h2 {
+      color: #fff;
+      margin-top: 0;
+    }
+    .input_wrap,
+    .answer_wrap {
+      margin-bottom: 20px;
+    }
+    .answer_wrap {
+      display: flex;
+      align-items: center;
+      column-gap: 100px;
+    }
+  }
+}

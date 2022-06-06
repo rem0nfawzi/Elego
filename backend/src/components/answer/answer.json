@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_answer_answers",
+  "info": {
+    "displayName": "Answer",
+    "icon": "asterisk"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "isRight": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

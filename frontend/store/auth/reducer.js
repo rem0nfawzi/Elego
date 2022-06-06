@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import api from "../../utils/api";
+import Router from "next/router";
 
 export const registerUser = createAsyncThunk("Register-User", async user => {
   const payload = {
@@ -40,6 +41,9 @@ export const authSlice = createSlice({
     setLoading: (state, action) => {
       state.loading = action.payload;
     },
+    setUser: (state, action) => {
+      state.user = action.payload;
+    },
   },
   extraReducers: builder => {
     builder.addCase(registerUser.pending, state => {
@@ -74,6 +78,7 @@ export const authSlice = createSlice({
       } else if (action.payload.user) {
         state.user = action.payload.user;
         document.cookie = `auth=${action.payload.jwt}`;
+        Router.push("/");
       } else {
         state.error = action.payload;
       }
@@ -82,6 +87,6 @@ export const authSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { setLoading } = authSlice.actions;
+export const { setLoading, setUser } = authSlice.actions;
 
 export default authSlice.reducer;
