@@ -4,10 +4,11 @@
   "info": {
     "singularName": "contest",
     "pluralName": "contests",
-    "displayName": "Contest"
+    "displayName": "Contest",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -21,6 +22,12 @@
       "type": "component",
       "repeatable": true,
       "component": "question.question"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "contests"
     }
   }
 }

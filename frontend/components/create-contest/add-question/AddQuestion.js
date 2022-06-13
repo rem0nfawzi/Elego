@@ -4,16 +4,16 @@ import Input from "../../shared/form/input/Input";
 import styles from "./styles.module.scss";
 
 const AddQuestion = ({ setShowModal, setQuestions }) => {
-  const [text, setText] = useState("");
+  const [statement, setStatement] = useState("");
   const [answers, setAnswers] = useState([
-    { id: 1, text: "", right: false },
-    { id: 2, text: "", right: false },
-    { id: 3, text: "", right: false },
-    { id: 4, text: "", right: false },
+    { key: 1, text: "", isRight: false },
+    { key: 2, text: "", isRight: false },
+    { key: 3, text: "", isRight: false },
+    { key: 4, text: "", isRight: false },
   ]);
   const handleSubmit = e => {
     e.preventDefault();
-    setQuestions(prev => [...prev, { text, answers }]);
+    setQuestions(prev => [...prev, { statement, answer: answers }]);
     setShowModal(false);
   };
   return (
@@ -24,20 +24,20 @@ const AddQuestion = ({ setShowModal, setQuestions }) => {
         <div className={styles.input_wrap}>
           <Input
             type="text"
-            value={text}
-            setValue={setText}
+            value={statement}
+            setValue={setStatement}
             placeholder="Statement"
           />
         </div>
         {answers.map(answer => (
-          <div className={styles.answer_wrap} key={answer.id}>
+          <div className={styles.answer_wrap} key={answer.key}>
             <Input
               type="text"
               value={answer.text}
               setValue={value => {
                 setAnswers(prev =>
                   prev.map(el =>
-                    el.id === answer.id ? { ...el, text: value } : el
+                    el.key === answer.key ? { ...el, text: value } : el
                   )
                 );
               }}
@@ -48,7 +48,7 @@ const AddQuestion = ({ setShowModal, setQuestions }) => {
               name="answer"
               onClick={() => {
                 setAnswers(prev =>
-                  prev.map(el => ({ ...el, right: el.id === answer.id }))
+                  prev.map(el => ({ ...el, isRight: el.key === answer.key }))
                 );
               }}
             />

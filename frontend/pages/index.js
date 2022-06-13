@@ -3,10 +3,12 @@ import Contests from "../components/home/contests/Contests";
 import { setUser } from "../store/auth/reducer";
 import { useDispatch } from "react-redux";
 import authinticate from "../utils/authinticate";
+import { getContests } from "../store/contest/contest";
 
 const Index = ({ user }) => {
   const dispatch = useDispatch();
   useEffect(() => {
+    dispatch(getContests());
     if (user) dispatch(setUser(user));
   }, [user]);
   return <Contests />;
