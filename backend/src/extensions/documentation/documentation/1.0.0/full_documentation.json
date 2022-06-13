@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-06-13T20:21:10.678Z"
+    "x-generation-date": "2022-06-13T21:42:20.801Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -123,6 +123,14 @@
                           }
                         }
                       }
+                    },
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "mcq",
+                        "true_false",
+                        "q_mark"
+                      ]
                     }
                   }
                 }
@@ -185,6 +193,14 @@
                                 }
                               }
                             }
+                          },
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "mcq",
+                              "true_false",
+                              "q_mark"
+                            ]
                           }
                         }
                       }
@@ -690,6 +706,14 @@
                                                           }
                                                         }
                                                       }
+                                                    },
+                                                    "type": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "mcq",
+                                                        "true_false",
+                                                        "q_mark"
+                                                      ]
                                                     }
                                                   }
                                                 }
@@ -921,6 +945,14 @@
                               }
                             }
                           }
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "mcq",
+                            "true_false",
+                            "q_mark"
+                          ]
                         }
                       }
                     }
@@ -1426,6 +1458,14 @@
                                                         }
                                                       }
                                                     }
+                                                  },
+                                                  "type": {
+                                                    "type": "string",
+                                                    "enum": [
+                                                      "mcq",
+                                                      "true_false",
+                                                      "q_mark"
+                                                    ]
                                                   }
                                                 }
                                               }
@@ -2934,6 +2974,14 @@
                                                                         }
                                                                       }
                                                                     }
+                                                                  },
+                                                                  "type": {
+                                                                    "type": "string",
+                                                                    "enum": [
+                                                                      "mcq",
+                                                                      "true_false",
+                                                                      "q_mark"
+                                                                    ]
                                                                   }
                                                                 }
                                                               }
@@ -3639,6 +3687,14 @@
                                                                       }
                                                                     }
                                                                   }
+                                                                },
+                                                                "type": {
+                                                                  "type": "string",
+                                                                  "enum": [
+                                                                    "mcq",
+                                                                    "true_false",
+                                                                    "q_mark"
+                                                                  ]
                                                                 }
                                                               }
                                                             }
@@ -4087,6 +4143,14 @@
                                                                                       }
                                                                                     }
                                                                                   }
+                                                                                },
+                                                                                "type": {
+                                                                                  "type": "string",
+                                                                                  "enum": [
+                                                                                    "mcq",
+                                                                                    "true_false",
+                                                                                    "q_mark"
+                                                                                  ]
                                                                                 }
                                                                               }
                                                                             }
@@ -4821,6 +4885,14 @@
                                                                                     }
                                                                                   }
                                                                                 }
+                                                                              },
+                                                                              "type": {
+                                                                                "type": "string",
+                                                                                "enum": [
+                                                                                  "mcq",
+                                                                                  "true_false",
+                                                                                  "q_mark"
+                                                                                ]
                                                                               }
                                                                             }
                                                                           }
@@ -5915,6 +5987,14 @@
                                                                         }
                                                                       }
                                                                     }
+                                                                  },
+                                                                  "type": {
+                                                                    "type": "string",
+                                                                    "enum": [
+                                                                      "mcq",
+                                                                      "true_false",
+                                                                      "q_mark"
+                                                                    ]
                                                                   }
                                                                 }
                                                               }
@@ -6659,6 +6739,14 @@
                                                                       }
                                                                     }
                                                                   }
+                                                                },
+                                                                "type": {
+                                                                  "type": "string",
+                                                                  "enum": [
+                                                                    "mcq",
+                                                                    "true_false",
+                                                                    "q_mark"
+                                                                  ]
                                                                 }
                                                               }
                                                             }

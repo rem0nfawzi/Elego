@@ -13,23 +13,17 @@ export const createContest = createAsyncThunk(
       payload,
       isAuth: true,
     });
-    console.log("RE", response);
     return response;
   }
 );
 
 export const getContests = createAsyncThunk("Get-Contests", async () => {
-  // const payload = {
-  //   data: { ...contest },
-  // };
-  console.log("H");
   const response = await api({
     method: "GET",
     endpoint: "/api/contests",
-    // payload,
+    payload: {},
     isAuth: true,
   });
-  console.log("RE", response);
   return response;
 });
 

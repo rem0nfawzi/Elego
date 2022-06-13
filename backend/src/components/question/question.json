@@ -2,7 +2,8 @@
   "collectionName": "components_question_questions",
   "info": {
     "displayName": "Question",
-    "icon": "question"
+    "icon": "question",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -14,6 +15,15 @@
       "type": "component",
       "repeatable": true,
       "component": "answer.answer"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "mcq",
+        "true_false",
+        "q_mark"
+      ],
+      "default": "mcq"
     }
   }
 }

@@ -14,4 +14,14 @@ module.exports = createCoreController("api::contest.contest", ({ strapi }) => ({
     const res = await super.create(ctx);
     return { res };
   },
+
+  async find(ctx) {
+    const entries = await strapi.db.query("api::contest.contest").findMany({
+      where: {
+        author: ctx.state.user.id,
+      },
+    });
+    const sanitizedEntity = await this.sanitizeOutput(entries, ctx);
+    return this.transformResponse(sanitizedEntity);
+  },
 }));
