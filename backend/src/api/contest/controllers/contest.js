@@ -24,4 +24,17 @@ module.exports = createCoreController("api::contest.contest", ({ strapi }) => ({
     const sanitizedEntity = await this.sanitizeOutput(entries, ctx);
     return this.transformResponse(sanitizedEntity);
   },
+
+  async findOne(ctx) {
+    // some logic here
+    const entry = await strapi.entityService.findOne(
+      "api::contest.contest",
+      ctx.params.id,
+      {
+        populate: ["question", "question.answer"],
+      }
+    );
+    console.log(entry);
+    return entry;
+  },
 }));

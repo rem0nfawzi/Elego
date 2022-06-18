@@ -28,6 +28,10 @@
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "contests"
+    },
+    "question_time": {
+      "type": "integer",
+      "default": 0
     }
   }
 }

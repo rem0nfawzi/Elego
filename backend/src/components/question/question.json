@@ -23,7 +23,8 @@
         "true_false",
         "q_mark"
       ],
-      "default": "mcq"
+      "default": "mcq",
+      "required": true
     }
   }
 }

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-06-13T21:42:20.801Z"
+    "x-generation-date": "2022-06-18T11:46:54.430Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -145,6 +145,9 @@
                   }
                 ],
                 "example": "string or id"
+              },
+              "question_time": {
+                "type": "integer"
               }
             }
           }
@@ -735,6 +738,9 @@
                                                   }
                                                 }
                                               },
+                                              "question_time": {
+                                                "type": "integer"
+                                              },
                                               "createdAt": {
                                                 "type": "string",
                                                 "format": "date-time"
@@ -831,6 +837,9 @@
                           }
                         }
                       }
+                    },
+                    "question_time": {
+                      "type": "integer"
                     },
                     "createdAt": {
                       "type": "string",
@@ -1487,6 +1496,9 @@
                                                 }
                                               }
                                             },
+                                            "question_time": {
+                                              "type": "integer"
+                                            },
                                             "createdAt": {
                                               "type": "string",
                                               "format": "date-time"
@@ -1583,6 +1595,9 @@
                         }
                       }
                     }
+                  },
+                  "question_time": {
+                    "type": "integer"
                   },
                   "createdAt": {
                     "type": "string",
@@ -3003,6 +3018,9 @@
                                                                 }
                                                               }
                                                             },
+                                                            "question_time": {
+                                                              "type": "integer"
+                                                            },
                                                             "createdAt": {
                                                               "type": "string",
                                                               "format": "date-time"
@@ -3716,6 +3734,9 @@
                                                               }
                                                             }
                                                           },
+                                                          "question_time": {
+                                                            "type": "integer"
+                                                          },
                                                           "createdAt": {
                                                             "type": "string",
                                                             "format": "date-time"
@@ -4171,6 +4192,9 @@
                                                                                 }
                                                                               }
                                                                             }
+                                                                          },
+                                                                          "question_time": {
+                                                                            "type": "integer"
                                                                           },
                                                                           "createdAt": {
                                                                             "type": "string",
@@ -4913,6 +4937,9 @@
                                                                               }
                                                                             }
                                                                           }
+                                                                        },
+                                                                        "question_time": {
+                                                                          "type": "integer"
                                                                         },
                                                                         "createdAt": {
                                                                           "type": "string",
@@ -6016,6 +6043,9 @@
                                                                 }
                                                               }
                                                             },
+                                                            "question_time": {
+                                                              "type": "integer"
+                                                            },
                                                             "createdAt": {
                                                               "type": "string",
                                                               "format": "date-time"
@@ -6767,6 +6797,9 @@
                                                                 }
                                                               }
                                                             }
+                                                          },
+                                                          "question_time": {
+                                                            "type": "integer"
                                                           },
                                                           "createdAt": {
                                                             "type": "string",
