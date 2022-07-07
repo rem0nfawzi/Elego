@@ -1,17 +1,18 @@
 import React, { useEffect } from "react";
-import api from "../../utils/api";
-import { setUser } from "../../store/auth/reducer";
+import api from "../../../utils/api";
+import { setUser } from "../../../store/auth/reducer";
 import { useDispatch } from "react-redux";
-import authinticate from "../../utils/authinticate";
+import authinticate from "../../../utils/authinticate";
 import axios from "axios";
+import ContestComp from "../../../components/contest/Contest";
 
 const Contest = ({ user, contest }) => {
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log("C", contest);
     if (user) dispatch(setUser(user));
-  }, [user]);
-  return <div></div>;
+  }, []);
+
+  return <ContestComp contest={contest} />;
 };
 
 export async function getServerSideProps(context) {
@@ -28,7 +29,6 @@ export async function getServerSideProps(context) {
         method: "GET",
         url: `${process.env.NEXT_PUBLIC_API_URL}/api/contests/${id}`,
       });
-      console.log("CON:", contest.data);
       return {
         props: {
           user,

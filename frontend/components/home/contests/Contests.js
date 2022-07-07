@@ -23,7 +23,7 @@ const Contests = () => {
         <h1 className={styles.title}>My contests</h1>
         {contests.map(contest => (
           <div key={contest.id}>
-            <Link href={`/contest/${contest.id}`}>
+            <Link href={`/contest/${contest.id}/0`}>
               <a>{contest.attributes.title}</a>
             </Link>
           </div>

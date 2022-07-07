@@ -1,0 +1,25 @@
+.nav {
+  margin-top: 30px;
+  display: flex;
+  column-gap: 30px;
+  .btn {
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: #2788ca;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    &.next {
+      transform: rotate(180deg);
+    }
+  }
+}

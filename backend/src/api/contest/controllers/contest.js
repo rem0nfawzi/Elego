@@ -34,7 +34,6 @@ module.exports = createCoreController("api::contest.contest", ({ strapi }) => ({
         populate: ["question", "question.answer"],
       }
     );
-    console.log(entry);
     return entry;
   },
 }));

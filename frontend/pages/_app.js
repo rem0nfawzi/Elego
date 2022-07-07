@@ -6,6 +6,15 @@ function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <Component {...pageProps} />
+      <button
+        onClick={() =>
+          document.dir === "rtl"
+            ? (document.dir = "ltr")
+            : (document.dir = "rtl")
+        }
+      >
+        Lang
+      </button>
     </Provider>
   );
 }

@@ -1,12 +1,33 @@
 h1,
 h2,
 h3 {
-  font-family: poppins_black;
+  font-family: poppins_black, noto_black;
   letter-spacing: 0.6px;
+}
+h1 {
+  font-size: 58px;
+}
+h2 {
+  font-size: 44px;
+}
+
+h3 {
+  font-size: 38px;
+}
+
+h4 {
+  font-size: 32px;
+}
+h5 {
+  font-size: 24px;
+}
+h6 {
+  font-size: 18px;
 }
 
 p,
 span,
-input {
-  font-family: poppins_regular;
+input,
+a {
+  font-family: poppins_black, noto_black;
 }
