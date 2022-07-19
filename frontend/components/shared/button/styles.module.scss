@@ -1,10 +1,8 @@
-$background-color: #2788ca;
-
 .button {
   width: 360px;
   padding: 18px 24px;
   border-radius: 8px;
-  background-color: $background-color;
+  background-color: var(--btn1-bg);
   border: 0;
   cursor: pointer;
   color: #fff;
@@ -13,9 +11,9 @@ $background-color: #2788ca;
   transition: all 0.2s ease-in-out;
   font-family: poppins_bold;
   &:hover {
-    background-color: #2484c3;
+    background-color: var(--btn1-hover-bg);
   }
   &:active {
-    background-color: #1f7bb8;
+    background-color: var(--btn1-active-bg);
   }
 }

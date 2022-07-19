@@ -16,18 +16,20 @@ const Contests = () => {
   return (
     <section className={styles.contests}>
       <div className="container">
+        <h1 className={styles.title}>My contests</h1>
         <Button
           text="Add Contest"
           onClick={() => router.push("create-contest")}
         />
-        <h1 className={styles.title}>My contests</h1>
-        {contests.map(contest => (
-          <div key={contest.id}>
-            <Link href={`/contest/${contest.id}/0`}>
-              <a>{contest.attributes.title}</a>
-            </Link>
-          </div>
-        ))}
+        <div className={styles.items}>
+          {contests.map(contest => (
+            <div key={contest.id} className={styles.contest}>
+              <Link href={`/contest/${contest.id}/0`}>
+                <a className={styles.link}>{contest.attributes.title}</a>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
