@@ -1,21 +1,11 @@
-// path: ./config/env/production/database.js
+const path = require("path");
 
-const parse = require("pg-connection-string").parse;
-const config = parse(process.env.DATABASE_URL);
-
-module.exports = ({ env }) => ({
+module.exports = () => ({
   connection: {
-    client: "postgres",
+    client: "sqlite",
     connection: {
-      host: config.host,
-      port: config.port,
-      database: config.database,
-      user: config.user,
-      password: config.password,
-      ssl: {
-        rejectUnauthorized: false,
-      },
+      filename: path.join(__dirname, "..", ".tmp/data.db"),
     },
-    debug: false,
+    useNullAsDefault: true,
   },
 });
